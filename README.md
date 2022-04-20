@@ -6,7 +6,7 @@ Demo of an app that allows to create a list of things to be done.
 
 Changes won't be saved. Login and register pages can be skipped with a button under the forms.
 
-## Technologies used
+## Made with
 
 React 17, Router v6, React Hook Form, TypeScript 4.6, Material UI 5, TSS-react, yup.
 
