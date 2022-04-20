@@ -10,7 +10,7 @@ Changes won't be saved. Login and register pages can be skipped with a button un
 
 React 17, Router v6, React Hook Form, TypeScript 4.6, Material UI 5, TSS-react, yup.
 
-### Features
+## Features
 
 Login and register forms fully validated with yup. Instructive helper text errors.
 
