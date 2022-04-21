@@ -2,7 +2,7 @@
 
 Demo of an app that allows to create a list of things to be done.
 
-## Serverless
+## No backend
 
 Changes won't be saved. Login and register pages can be skipped with a button under the forms.
 
