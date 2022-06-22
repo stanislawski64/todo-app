@@ -1,4 +1,4 @@
-export interface CardItemProps {
+export interface CardProps {
   title: string
   description: string
   editCard: () => void

@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-const loginSchema = yup.object({
+export const loginSchema = yup.object({
   usernameEmail: yup
     .string()
     .label('Username / Email')
@@ -16,5 +16,3 @@ const loginSchema = yup.object({
     .max(64)
     .default(''),
 })
-
-export default loginSchema

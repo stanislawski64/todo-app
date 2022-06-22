@@ -1,5 +1,5 @@
 import {
-  Card,
+  Card as MuiCard,
   CardActionArea,
   CardActions,
   CardContent,
@@ -9,19 +9,19 @@ import {
 } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
-import { CardItemProps } from './CardItem.interface'
-import useStyles from './CardItem.styles'
+import { CardProps } from './Card.interface'
+import useStyles from './Card.styles'
 
-const CardItem: React.FC<CardItemProps> = ({
+export const Card = ({
   title,
   description,
   viewCard,
   editCard,
   removeCard,
-}) => {
+}: CardProps) => {
   const { classes } = useStyles()
   return (
-    <Card
+    <MuiCard
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -51,8 +51,6 @@ const CardItem: React.FC<CardItemProps> = ({
           </IconButton>
         </Stack>
       </CardActions>
-    </Card>
+    </MuiCard>
   )
 }
-
-export default CardItem

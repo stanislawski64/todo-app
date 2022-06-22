@@ -5,7 +5,7 @@ const uppercase = /(?=.*[A-Z])/
 const numeric = /(?=.*[0-9])/
 const alphanumeric = /^[a-zA-Z0-9]+$/
 
-const registerSchema = yup.object({
+export const registerSchema = yup.object({
   email: yup
     .string()
     .label('Email')
@@ -45,5 +45,3 @@ const registerSchema = yup.object({
     .oneOf([yup.ref('password')], 'Passwords must match')
     .default(''),
 })
-
-export default registerSchema

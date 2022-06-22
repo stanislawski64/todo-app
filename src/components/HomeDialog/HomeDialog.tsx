@@ -13,12 +13,12 @@ import SaveIcon from '@mui/icons-material/Save'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useEffect } from 'react'
-import TextFieldControl from '../TextFieldControl/TextFieldControl'
+import { TextFieldControl } from '../TextFieldControl/TextFieldControl'
 import { HomeDialogProps, HomeDialogInterface } from './HomeDialog.interface'
-import homeDialogSchema from './HomeDialog.schema'
+import { homeDialogSchema } from './HomeDialog.schema'
 import useStyles from './HomeDialog.styles'
 
-const HomeDialog: React.FC<HomeDialogProps> = ({
+export const HomeDialog = ({
   openModal,
   setOpenModal,
   isEdit,
@@ -27,7 +27,7 @@ const HomeDialog: React.FC<HomeDialogProps> = ({
   setCards,
   selectedCard,
   removeCard,
-}) => {
+}: HomeDialogProps) => {
   const { classes } = useStyles()
 
   const generateId = () => {
@@ -167,5 +167,3 @@ const HomeDialog: React.FC<HomeDialogProps> = ({
     </Dialog>
   )
 }
-
-export default HomeDialog

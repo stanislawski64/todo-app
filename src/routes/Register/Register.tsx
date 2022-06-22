@@ -12,12 +12,12 @@ import {
 } from '@mui/material'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { RegisterInterface } from './Register.interface'
-import registerSchema from './Register.schema'
+import { registerSchema } from './Register.schema'
 import useStyles from './Register.styles'
-import TextFieldControl from '../TextFieldControl/TextFieldControl'
-import { useLogin } from '../AuthContextProvider/AuthContextProvider'
+import { TextFieldControl } from '../../components/TextFieldControl/TextFieldControl'
+import { useLogin } from '../../context/AuthContextProvider/AuthContextProvider'
 
-const Register: React.FC = () => {
+export const Register = () => {
   const navigate = useNavigate()
   const login = useLogin()
 
@@ -142,5 +142,3 @@ const Register: React.FC = () => {
     </Container>
   )
 }
-
-export default Register

@@ -2,7 +2,7 @@ import TextField from '@mui/material/TextField'
 import { useController, UseControllerProps } from 'react-hook-form'
 import { TextFieldControlProps } from './TextFieldControl.interface'
 
-const TextFieldControl = <T,>({
+export const TextFieldControl = <T,>({
   name,
   control,
   defaultValue,
@@ -16,7 +16,7 @@ const TextFieldControl = <T,>({
   autoFocus = false,
   multiline = false,
   variant = 'outlined',
-}: UseControllerProps<T> & TextFieldControlProps): JSX.Element => {
+}: UseControllerProps<T> & TextFieldControlProps) => {
   const { field } = useController({
     name,
     control,
@@ -39,5 +39,3 @@ const TextFieldControl = <T,>({
     />
   )
 }
-
-export default TextFieldControl

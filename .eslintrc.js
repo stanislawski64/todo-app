@@ -20,6 +20,7 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',

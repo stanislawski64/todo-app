@@ -13,16 +13,16 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { useState, useEffect } from 'react'
 import { LoginInterface, LoginLocationState } from './Login.interface'
-import loginSchema from './Login.schema'
+import { loginSchema } from './Login.schema'
 import useStyles from './Login.styles'
-import TextFieldControl from '../TextFieldControl/TextFieldControl'
-import Snackbar from '../Snackbar/Snackbar'
+import { TextFieldControl } from '../../components/TextFieldControl/TextFieldControl'
+import { Snackbar } from '../../components/Snackbar/Snackbar'
 import {
   useAuthToken,
   useLogin,
-} from '../AuthContextProvider/AuthContextProvider'
+} from '../../context/AuthContextProvider/AuthContextProvider'
 
-const Login: React.FC = () => {
+export const Login = () => {
   const [successfulRegistration, setSuccessfulRegistration] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
@@ -143,5 +143,3 @@ const Login: React.FC = () => {
     </Container>
   )
 }
-
-export default Login

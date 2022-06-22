@@ -2,13 +2,13 @@ import { Box, IconButton, Stack, Toolbar, Tooltip } from '@mui/material'
 import { Brightness4, Brightness7 } from '@mui/icons-material'
 import { useTheme } from '@mui/material/styles'
 import LogoutIcon from '@mui/icons-material/Logout'
-import { useThemeMode } from '../theme/ThemeProviders/ThemeProviders'
+import { useThemeMode } from '../../theme/ThemeProvider/ThemeProvider'
 import {
   useAuthToken,
   useLogout,
-} from '../AuthContextProvider/AuthContextProvider'
+} from '../../context/AuthContextProvider/AuthContextProvider'
 
-const Layout: React.FC = ({ children }) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   const colorMode = useThemeMode()
   const theme = useTheme()
   const logout = useLogout()
@@ -51,5 +51,3 @@ const Layout: React.FC = ({ children }) => {
     </>
   )
 }
-
-export default Layout

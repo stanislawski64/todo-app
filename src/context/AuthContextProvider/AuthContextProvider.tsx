@@ -19,7 +19,11 @@ export const useLogin = () => useContext(AuthContext).login
 
 export const useLogout = () => useContext(AuthContext).logout
 
-const AuthContextProvider: React.FC = ({ children }) => {
+export const AuthContextProvider = ({
+  children,
+}: {
+  children: React.ReactNode
+}) => {
   const navigate = useNavigate()
 
   const initialToken = localStorage.getItem('token') || ''
@@ -44,5 +48,3 @@ const AuthContextProvider: React.FC = ({ children }) => {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
-
-export default AuthContextProvider

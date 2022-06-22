@@ -1,14 +1,14 @@
 import { Container, Grid } from '@mui/material'
 import { useState } from 'react'
-import CardItem from '../CardItem/CardItem'
-import AddNewCardItem from '../AddNewCardItem/AddNewCardItem'
-import { Card } from './Home.interface'
-import HomeDialog from '../HomeDialog/HomeDialog'
-import initialCards from './initialCards'
+import { Card } from '../../components/Card/Card'
+import { AddNewCard } from '../../components/AddNewCard/AddNewCard'
+import { CardInterface } from './Home.interface'
+import { HomeDialog } from '../../components/HomeDialog/HomeDialog'
+import { initialCards } from './initialCards'
 
-const Home: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>(initialCards)
-  const [selectedCard, setSelectedCard] = useState<Card>()
+export const Home = () => {
+  const [cards, setCards] = useState<CardInterface[]>(initialCards)
+  const [selectedCard, setSelectedCard] = useState<CardInterface>()
   const [openModal, setOpenModal] = useState(false)
   const [isEdit, setIsEdit] = useState(false)
 
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
       <Grid container spacing={4}>
         {cards.map((card) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={card.id}>
-            <CardItem
+            <Card
               title={card.title}
               description={card.description}
               viewCard={() => viewCard(card.id)}
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           </Grid>
         ))}
         <Grid item xs={12} sm={6} md={4} lg={3}>
-          <AddNewCardItem addCard={addCard} />
+          <AddNewCard addCard={addCard} />
         </Grid>
       </Grid>
       <HomeDialog
@@ -66,5 +66,3 @@ const Home: React.FC = () => {
     </Container>
   )
 }
-
-export default Home

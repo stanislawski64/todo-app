@@ -1,6 +1,6 @@
-import { Card } from './Home.interface'
+import { CardInterface } from './Home.interface'
 
-const initialCards: Card[] = [
+export const initialCards: CardInterface[] = [
   {
     id: 0,
     title: 'SHOPPING LIST',
@@ -19,5 +19,3 @@ const initialCards: Card[] = [
       '(╯°□°)╯︵ ┻━┻\n┬─┬ノ( º _ ºノ)\n\n(┛◉Д◉)┛彡┻━┻\n┬─┬ノ( º _ ºノ)\n\n(ノಠ益ಠ)ノ彡┻━┻\n┬─┬ノ( º _ ºノ)\n\n(╯°Д°)╯︵/(.□ . \\)',
   },
 ]
-
-export default initialCards

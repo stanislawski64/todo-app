@@ -1,7 +1,7 @@
 import { createTheme, PaletteMode } from '@mui/material'
 import { orange } from '@mui/material/colors'
 
-const buildTheme = (mode: PaletteMode) => {
+export const buildTheme = (mode: PaletteMode) => {
   let theme = createTheme({
     palette: {
       mode,
@@ -40,5 +40,3 @@ const buildTheme = (mode: PaletteMode) => {
   })
   return theme
 }
-
-export default buildTheme

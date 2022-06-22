@@ -1,12 +1,12 @@
 import { Alert, Snackbar as MuiSnackbar } from '@mui/material'
 import { SnackbarProps } from './Snackbar.interface'
 
-const Snackbar: React.FC<SnackbarProps> = ({
+export const Snackbar = ({
   severity,
   open,
   onClose,
   message,
-}) => (
+}: SnackbarProps) => (
   <MuiSnackbar
     open={open}
     autoHideDuration={6000}
@@ -18,5 +18,3 @@ const Snackbar: React.FC<SnackbarProps> = ({
     </Alert>
   </MuiSnackbar>
 )
-
-export default Snackbar
