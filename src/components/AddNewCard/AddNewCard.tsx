@@ -1,7 +1,8 @@
 import { Box, Card as MuiCard, CardActionArea } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add'
+
 import { AddNewCardProps } from './AddNewCard.interface'
-import useStyles from './AddNewCard.styles'
+import { useStyles } from './AddNewCard.styles'
 
 export const AddNewCard = ({ addCard }: AddNewCardProps) => {
   const { classes } = useStyles()

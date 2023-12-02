@@ -11,11 +11,13 @@ import {
   Typography,
 } from '@mui/material'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-import { RegisterInterface } from './Register.interface'
-import { registerSchema } from './Register.schema'
-import useStyles from './Register.styles'
+
 import { TextFieldControl } from '../../components/TextFieldControl/TextFieldControl'
 import { useLogin } from '../../context/AuthContextProvider/AuthContextProvider'
+
+import { RegisterInterface } from './Register.interface'
+import { registerSchema } from './Register.schema'
+import { useStyles } from './Register.styles'
 
 export const Register = () => {
   const navigate = useNavigate()

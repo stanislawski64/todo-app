@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react'
+
 import { CardInterface } from '../../routes/Home/Home.interface'
 
 export interface HomeDialogProps {

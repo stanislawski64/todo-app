@@ -1,9 +1,11 @@
+import { HTMLInputTypeAttribute, ReactNode } from 'react'
+
 export interface TextFieldControlProps {
   id: string
   label: string
-  type: React.HTMLInputTypeAttribute
+  type: HTMLInputTypeAttribute
   error?: boolean
-  helperText?: React.ReactNode
+  helperText?: ReactNode
   fullWidth?: boolean
   required?: boolean
   autoFocus?: boolean

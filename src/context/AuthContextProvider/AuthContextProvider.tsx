@@ -1,5 +1,6 @@
 import {
   createContext,
+  ReactNode,
   useCallback,
   useContext,
   useMemo,
@@ -19,11 +20,7 @@ export const useLogin = () => useContext(AuthContext).login
 
 export const useLogout = () => useContext(AuthContext).logout
 
-export const AuthContextProvider = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => {
+export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate()
 
   const initialToken = localStorage.getItem('token') || ''

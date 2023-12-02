@@ -8,7 +8,7 @@ Changes won't be saved. Login and register pages can be skipped with a button un
 
 ## Made with
 
-React 17, Router v6, React Hook Form, TypeScript 4.6, Material UI 5, TSS-react, yup.
+React 18, Router v6, React Hook Form, TypeScript 4.8, Material UI 5, TSS-react, yup.
 
 ## Features
 

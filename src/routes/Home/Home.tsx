@@ -1,9 +1,11 @@
 import { Container, Grid } from '@mui/material'
 import { useState } from 'react'
+
 import { Card } from '../../components/Card/Card'
 import { AddNewCard } from '../../components/AddNewCard/AddNewCard'
-import { CardInterface } from './Home.interface'
 import { HomeDialog } from '../../components/HomeDialog/HomeDialog'
+
+import { CardInterface } from './Home.interface'
 import { initialCards } from './initialCards'
 
 export const Home = () => {

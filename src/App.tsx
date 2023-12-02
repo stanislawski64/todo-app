@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, useRoutes, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom'
 import { CssBaseline } from '@mui/material'
+
 import { Home } from './routes/Home/Home'
 import { Register } from './routes/Register/Register'
 import { Login } from './routes/Login/Login'
-import { ThemeProvider } from './theme/ThemeProvider/ThemeProvider'
+import { ThemeProvider } from './theme/ThemeProvider'
 import { IsLoggedIn } from './guards/IsLoggedIn/IsLoggedIn'
 import { Layout } from './components/Layout/Layout'
 import { AuthContextProvider } from './context/AuthContextProvider/AuthContextProvider'
 
 export const App = () => {
   const Routes = () => {
-    const routes = useRoutes([
+    return useRoutes([
       {
         path: '/',
         element: (
@@ -34,7 +35,6 @@ export const App = () => {
         element: <Navigate to="/" />,
       },
     ])
-    return routes
   }
 
   return (

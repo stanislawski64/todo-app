@@ -1,6 +1,6 @@
 import { makeStyles } from 'tss-react/mui'
 
-export default makeStyles()((theme) => ({
+export const useStyles = makeStyles()((theme) => ({
   cardText: {
     overflow: 'hidden',
     display: '-webkit-box',

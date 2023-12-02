@@ -13,10 +13,12 @@ import SaveIcon from '@mui/icons-material/Save'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useEffect } from 'react'
+
 import { TextFieldControl } from '../TextFieldControl/TextFieldControl'
+
 import { HomeDialogProps, HomeDialogInterface } from './HomeDialog.interface'
 import { homeDialogSchema } from './HomeDialog.schema'
-import useStyles from './HomeDialog.styles'
+import { useStyles } from './HomeDialog.styles'
 
 export const HomeDialog = ({
   openModal,

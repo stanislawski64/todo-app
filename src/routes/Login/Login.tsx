@@ -12,15 +12,17 @@ import {
 } from '@mui/material'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { useState, useEffect } from 'react'
-import { LoginInterface, LoginLocationState } from './Login.interface'
-import { loginSchema } from './Login.schema'
-import useStyles from './Login.styles'
+
 import { TextFieldControl } from '../../components/TextFieldControl/TextFieldControl'
 import { Snackbar } from '../../components/Snackbar/Snackbar'
 import {
   useAuthToken,
   useLogin,
 } from '../../context/AuthContextProvider/AuthContextProvider'
+
+import { LoginInterface, LoginLocationState } from './Login.interface'
+import { loginSchema } from './Login.schema'
+import { useStyles } from './Login.styles'
 
 export const Login = () => {
   const [successfulRegistration, setSuccessfulRegistration] = useState(false)

@@ -9,8 +9,9 @@ import {
 } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
+
 import { CardProps } from './Card.interface'
-import useStyles from './Card.styles'
+import { useStyles } from './Card.styles'
 
 export const Card = ({
   title,

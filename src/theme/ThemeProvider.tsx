@@ -1,9 +1,10 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, ReactNode, useContext, useMemo, useState } from 'react'
 import { CacheProvider } from '@emotion/react'
 import createCache from '@emotion/cache'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { PaletteMode } from '@mui/material'
-import { buildTheme } from '../buildTheme/buildTheme'
+
+import { buildTheme } from './buildTheme'
 
 export const muiCache = createCache({
   key: 'mui',
@@ -16,7 +17,7 @@ export function useThemeMode() {
   return useContext(ColorModeContext)
 }
 
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const localStorageMode = localStorage.getItem('mode')
   const initialMode: PaletteMode =
     localStorageMode === 'dark' || localStorageMode === 'light'

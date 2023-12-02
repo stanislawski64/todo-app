@@ -1,4 +1,5 @@
 import { Alert, Snackbar as MuiSnackbar } from '@mui/material'
+
 import { SnackbarProps } from './Snackbar.interface'
 
 export const Snackbar = ({
